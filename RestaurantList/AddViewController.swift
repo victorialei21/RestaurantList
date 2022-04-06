@@ -19,7 +19,7 @@ class AddViewController: UIViewController {
         super.viewDidLoad()
         stepper.value = 3
         ratingText.text = Int(stepper.value).description
-    }
+    }//viewDidLoad
     
 
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
