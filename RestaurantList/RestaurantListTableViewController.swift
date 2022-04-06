@@ -56,6 +56,7 @@ class RestaurantListTableViewController: UITableViewController {
             let restaurant = restaurantList[indexPath.row]
             if let context = (UIApplication.shared.delegate as?AppDelegate)?.persistentContainer.viewContext{
                 context.delete(restaurant)
+                try? context.save()
                 getRestaurants()
             }
         }
