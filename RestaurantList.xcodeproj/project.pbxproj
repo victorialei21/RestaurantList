@@ -15,6 +15,7 @@
 		FEAE195927FA49BF00516EC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEAE195727FA49BF00516EC5 /* LaunchScreen.storyboard */; };
 		FEAE196127FA57AA00516EC5 /* RestaurantListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAE196027FA57AA00516EC5 /* RestaurantListTableViewController.swift */; };
 		FEAE196327FA592A00516EC5 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAE196227FA592A00516EC5 /* AddViewController.swift */; };
+		FEAE196527FCE23100516EC5 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAE196427FCE23100516EC5 /* EditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FEAE195A27FA49BF00516EC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEAE196027FA57AA00516EC5 /* RestaurantListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListTableViewController.swift; sourceTree = "<group>"; };
 		FEAE196227FA592A00516EC5 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		FEAE196427FCE23100516EC5 /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 		FEAE193D27FA49BB00516EC5 = {
 			isa = PBXGroup;
 			children = (
+				FEAE196427FCE23100516EC5 /* EditViewController.swift */,
 				FEAE194827FA49BB00516EC5 /* RestaurantList */,
 				FEAE194727FA49BB00516EC5 /* Products */,
 			);
@@ -146,6 +149,7 @@
 			files = (
 				FEAE196327FA592A00516EC5 /* AddViewController.swift in Sources */,
 				FEAE195427FA49BB00516EC5 /* RestaurantList.xcdatamodeld in Sources */,
+				FEAE196527FCE23100516EC5 /* EditViewController.swift in Sources */,
 				FEAE194A27FA49BB00516EC5 /* AppDelegate.swift in Sources */,
 				FEAE196127FA57AA00516EC5 /* RestaurantListTableViewController.swift in Sources */,
 				FEAE194C27FA49BB00516EC5 /* SceneDelegate.swift in Sources */,

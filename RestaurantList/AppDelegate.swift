@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  RestaurantList
 //
-//  Created by Victoria Lei on 4/3/22.
+//  Michelle Yun and Victoria Lei
 //
 
 import UIKit

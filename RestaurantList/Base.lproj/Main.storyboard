@@ -38,10 +38,76 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="YOV-V8-Ro6" kind="show" identifier="editSegue" id="Oqh-AV-kf9"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tgf-2z-qDc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1628.985507246377" y="75.669642857142847"/>
+        </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="HVp-hq-wLK">
+            <objects>
+                <viewController id="YOV-V8-Ro6" customClass="EditViewController" customModule="RestaurantList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a0C-WU-dHx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Odz-JY-AQu">
+                                <rect key="frame" x="171" y="509" width="67" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="save:" destination="YOV-V8-Ro6" eventType="touchUpInside" id="1Sa-HA-A7v"/>
+                                    <action selector="save:" destination="lSb-Km-MV3" eventType="touchUpInside" id="XSi-34-1lM"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Restaurant Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yX8-Ui-Z7U">
+                                <rect key="frame" x="113" y="164" width="183" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minimumValue="1" maximumValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="YBy-8G-lD9">
+                                <rect key="frame" x="157" y="422" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="stepperValueChanged:" destination="lSb-Km-MV3" eventType="valueChanged" id="Q36-6V-Zx4"/>
+                                    <action selector="stepperValueChanged:" destination="YOV-V8-Ro6" eventType="valueChanged" id="bsP-b9-1qq"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZhK-7m-8Vg">
+                                <rect key="frame" x="199" y="353" width="12" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type of Food" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FA3-G6-0mz">
+                                <rect key="frame" x="113" y="258" width="183" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Apc-s8-Ey6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jUK-Nx-VW4"/>
+                    <connections>
+                        <outlet property="name" destination="yX8-Ui-Z7U" id="nq6-Of-Ndb"/>
+                        <outlet property="ratingText" destination="ZhK-7m-8Vg" id="zYY-Yn-XBe"/>
+                        <outlet property="stepper" destination="YBy-8G-lD9" id="j3R-MN-Xpe"/>
+                        <outlet property="type" destination="FA3-G6-0mz" id="K0Y-Fn-etG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U0I-bB-01p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2436" y="462"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="ohI-hz-Riu">
@@ -102,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4qe-qE-sPq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2334.7826086956525" y="79.6875"/>
+            <point key="canvasLocation" x="2467" y="-216"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cd3-Dk-Cvd">
